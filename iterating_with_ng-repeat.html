@@ -1,0 +1,20 @@
+<html data-ng-app="">
+	<head>
+		<title>Repeating with ng-repeat directive</title>
+		
+	</head>
+
+	<body>
+	<div class="container" data-ng-init="members=['Ajeet','Ankit','Rahul','Nitesh','Sunny','Chitrank']">
+		Name : 
+		<br>
+		<input type="text" data-ng-model="name" />  {{ name }}
+		<h3>Repeating with ng-repeat directive</h3><br>
+		<ul>
+			<li ng-repeat=" dcmembers in members">{{dcmembers}}</li>
+		</ul>
+	</div>
+
+		<script  src="angular.min.js"></script>
+	</body>
+</html>

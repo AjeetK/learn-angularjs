@@ -1,0 +1,14 @@
+<div class="container">
+Name : <br/>
+<input type="text" data-ng-model="filter.name">
+<ul>
+	<li data-ng-repeat="dcmembers in members | filter:filter.name">{{dcmembers.name}} - {{dcmembers.department}}</li>
+</ul>
+<br/>
+Member Name : <br/>
+<input type="text" data-ng-model="newmember.name"><br/>
+<input type="text" data-ng-model="newmember.department"><br/>
+<button data-ng-click="addMember()">Add Member</button>
+<a href="#/view2">View2</a>
+
+</div>

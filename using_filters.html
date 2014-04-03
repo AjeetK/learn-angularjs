@@ -1,0 +1,20 @@
+<html data-ng-app="">
+	<head>
+		<title>Repeating with ng-repeat directive</title>
+		
+	</head>
+
+	<body>
+	<div class="container" data-ng-init="members=[{name:'Ajeet',department:'STS'},{name:'Ankit',department:'FE'},{name:'Rahul',department:'Correspondence'},{name:'Nitesh',department:'HTS'},{name:'Sunny',department:'EM'},{name:'Chitrank',department:'Training'}]">
+		Name : 
+		<br>
+		<input type="text" data-ng-model="iname" />  {{ iname }}
+		<h3>Repeating with ng-repeat directive</h3><br/>
+		<ul>
+			<li data-ng-repeat=" dcmembers in members | filter:iname  | orderBy:'departments'">{{dcmembers.name | uppercase}} - {{dcmembers.department }}</li>
+		</ul>
+	</div>
+
+		<script  src="angular.min.js"></script>
+	</body>
+</html>

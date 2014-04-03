@@ -1,0 +1,32 @@
+<html data-ng-app="demoApp">
+	<head>
+		<title>
+			Using simple controller in angularjs
+		</title>
+		<script type="text/javascript" src="angular.min.js"></script>
+	</head>
+	<body>
+		<div class="container" data-ng-controller="simplecontroller">
+			<input type="text" data-ng-model="name" />
+			<ul>
+				<li data-ng-repeat="dcmembers in members | filter:name">{{dcmembers.name +' - '+ dcmembers.department}}</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+		var demoApp = angular.module('demoApp',[]);
+
+		demoApp.controller('simplecontroller',function($scope)
+		{
+			$scope.members=[{name:'Ajeet',department:'STS'},
+			{name:'Ankit',department:'FE'},
+			{name:'Rahul',department:'Correspondence'},
+			{name:'Nitesh',department:'HTS'},
+			{name:'Sunny',department:'EM'},
+			{name:'Chitrank',department:'Training'}];
+		});
+		</script>
+
+		
+	</body>
+</html>
